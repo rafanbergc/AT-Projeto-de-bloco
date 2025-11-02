@@ -1,8 +1,6 @@
-const Container = () => {
+function Container() {
 	return (
-		<div>
-			<h1>Aqui é um Container</h1>
-		</div>
+		<div class="container"></div>
 	)
 }
 export default Container;

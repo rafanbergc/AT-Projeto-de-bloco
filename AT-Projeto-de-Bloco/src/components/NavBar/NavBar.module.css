@@ -1,0 +1,19 @@
+.navbar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+@media (min-width: 431px) and (max-width: 999px) {
+    .navbar{
+        margin: 0 20px;
+        width: 95vw;
+    }
+}
+@media (min-width: 1000px) {
+    .navbar{
+        width: 80vw;
+    }
+}

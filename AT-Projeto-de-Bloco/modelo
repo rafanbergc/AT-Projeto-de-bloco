@@ -1,0 +1,149 @@
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.welcome .button-appointment {
+    background-color: #d1ac66;
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    place-items: center;
+    gap: 4px;
+    color: white;
+    .fa-brands {
+        color: white;
+        font-size: 18px;
+    }
+}
+
+
+.carrousel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+
+    .carrousel-content {
+        background: #FFFFFF;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 2%, rgba(209, 172, 102, 1) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
+
+.follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.fa-brands {
+    color: #d1ac66;
+}
+
+.item-container {
+    margin: 10px;
+}
+
+.grande {
+    width: 300px;
+    height: 300px;
+}
+
+.pequena {
+    width: 50px;
+    height: 50px;
+}
+
+.media {
+    width: 150px;
+    height: 150px;
+}
+
+.contato {
+    background-color: #d1ac66;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid wheat;
+    width: 90%;
+    margin: 10px;
+
+    position: absolute;
+    top: 90vh;
+}
+
+.contato-info {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.contato p {
+    font-size: 15px;
+}
+
+.contato .fa-brands {
+    color: white;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.whatsapp-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    padding-top: 10px;
+}
+.atendimentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+.atendimentos-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    margin-top: 10px;   
+    color: #d1ac66;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 6px;
+    border: 2px solid #d1ac66;
+}
+
+.subtitle {
+    font-size: 14px;
+}

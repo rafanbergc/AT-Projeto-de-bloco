@@ -1,0 +1,88 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: white;
+}
+
+.buttonAppointment {
+    background-color: #d1ac66;
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    place-items: center;
+    gap: 4px;
+    color: white;
+}
+
+.icon {
+    color: white;
+    font-size: 20px;
+}
+
+h1 {
+    margin-top: 15px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.imagem {
+    width: 200px;
+    height: 200px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe {
+    display: none;
+}
+@media (min-width: 431px) and (max-width: 999px) {
+    .welcome {
+        width: 95vw;
+    }
+
+    .content {
+        gap: 50px;
+        justify-content: space-between;
+    }
+    .iframe {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .welcome {
+        width: 80vw;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem {
+        display: flex;
+        
+    }
+    iframe {
+        display: block;
+    }
+
+}
