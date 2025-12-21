@@ -1,0 +1,31 @@
+.servicosMain {
+  width: 100%;
+}
+
+
+@media (max-width: 441px) {
+  .servicosMain {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .servicosIntro {
+    text-align: center;
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 442px) {
+  .servicosMain {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .servicosIntro {
+    text-align: center;
+    padding: 0;
+  }
+}

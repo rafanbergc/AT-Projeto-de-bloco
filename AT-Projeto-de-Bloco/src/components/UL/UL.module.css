@@ -21,7 +21,7 @@
     position: absolute;
     top: 3px
 }
-@media (min-width: 431px) and (max-width: 999px) {
+@media (min-width: 442px) and (max-width: 999px) {
     .dinamicBox {
         width: 95vw;
         margin: 0 20px;

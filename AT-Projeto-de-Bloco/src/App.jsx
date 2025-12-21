@@ -1,19 +1,20 @@
 import "./App.css";
-
 import Header from "./components/Header/Header";
-import UL from "./components/UL/UL";
 import Navbar from "./components/NavBar/Navbar";
-import Welcome from "./components/Welcome/Welcome";
-import GoogleMap from "./components/GoogleMap/GoogleMap";
+import Footer from "./components/footer/Footer";
+
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
     <div className="container">
-      <Header />
-      <Navbar />
-      <UL />
-      <Welcome />
-      
+      <BrowserRouter>
+        <Header />
+        <Navbar />
+        <AppRoutes />
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

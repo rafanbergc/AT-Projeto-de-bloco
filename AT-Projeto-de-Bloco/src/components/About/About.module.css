@@ -1,0 +1,17 @@
+.aboutContainer {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
+}
+
+@media (min-width: 442px) {
+    .aboutContainer {
+        padding: 50px;
+        gap: 30px;
+        max-width: 850px;
+    }
+}

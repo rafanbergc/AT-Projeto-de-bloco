@@ -1,0 +1,93 @@
+.form {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #d1ac66;
+}
+
+.section {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: #d1ac66;
+  border-bottom: 1px solid #d1ac66;
+  padding-bottom: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #d1ac66;
+  font-size: 14px;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #d1ac66;
+  box-shadow: 0 0 0 1px #d1ac66;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #d1ac66;
+  resize: vertical;
+}
+
+.radioGroup {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  margin-top: 24px;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  background-color: #d1ac66;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.button:hover {
+  background-color: #d1ac66;
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .section {
+    font-size: 18px;
+  }
+}

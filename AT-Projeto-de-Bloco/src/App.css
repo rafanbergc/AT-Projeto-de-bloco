@@ -2,16 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    color: #555
 }
 
 .container {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #d1ac66;
+    
 }
 
-@media (min-width: 431px) and (max-width: 999px) {
+@media (min-width: 442px) and (max-width: 999px) {
     .container {
         display: flex;
         justify-content: center;

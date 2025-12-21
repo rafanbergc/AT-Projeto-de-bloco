@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "titulo": "QUIROPRAXIA",
+    "descricao": "Quiropraxia é uma terapia manual que alinha a coluna e restaura o equilíbrio do corpo, aliviando dores e melhorando a qualidade de vida",
+    "imagem": "/photos/quiro.jpeg"
+  },
+  {
+    "id": 2,
+    "titulo": "MASSOTERAPIA",
+    "descricao": "Massoterapia é a técnica que utiliza diferentes tipos de massagem para relaxar o corpo, aliviar tensões e promover bem-estar.",
+    "imagem": "/photos/masso.jpeg"
+  },
+  {
+    "id": 3,
+    "titulo": "LIBERAÇÃO MIOFASCIAL",
+    "descricao": "Liberação miofascial é uma técnica manual que reduz tensões e dores musculares, melhorando a mobilidade e o desempenho físico.",
+    "imagem": "/photos/liberacao.jpeg"
+  },
+ {
+  "id": 4,
+  "titulo": "VENTOSA",
+  "descricao": "Ventosaterapia é uma técnica que utiliza copos de sucção para aliviar dores, melhorar a circulação e eliminar toxinas do corpo.",
+  "imagem": "/photos/ventosa.jpeg"
+},
+  {
+    "id": 5,
+    "titulo": "ELETRO",
+    "descricao": "Eletroestimulação é uma terapia que utiliza correntes elétricas para aliviar dores, acelerar a recuperação muscular e melhorar o desempenho físico.",
+    "imagem": "/photos/eletro.jpeg"
+  }
+]
