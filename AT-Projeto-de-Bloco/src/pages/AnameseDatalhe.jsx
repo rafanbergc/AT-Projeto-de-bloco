@@ -1,7 +1,7 @@
 import VisualizarAnamnese from "../components/Anamnese/VisualizarAnamnese/VisualizarAnamnese";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import UL from "../components/UL/UL";
 
 function AnamneseDetalhe() {
   const { id } = useParams();
@@ -29,7 +29,11 @@ function AnamneseDetalhe() {
     return <p style={{ padding: 20 }}>Carregando anamnese...</p>;
   }
 
-  
-  return <VisualizarAnamnese anamnese={anamnese} />;
+  return (
+    <div className="container">
+      <UL />
+      <VisualizarAnamnese anamnese={anamnese} />;
+    </div>
+  );
 }
 export default AnamneseDetalhe;

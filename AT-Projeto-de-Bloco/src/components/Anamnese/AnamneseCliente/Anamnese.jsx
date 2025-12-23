@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Anamnese.module.css";
 import UL from "../../UL/UL";
+import FormularioEndereco from "../../CEP/CEP";
 
 
 
@@ -19,27 +20,51 @@ export default function Anamnese() {
     });
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleEnderecoChange(dadosEndereco) {
+  setForm((prev) => ({
+    ...prev,
+    endereco: dadosEndereco
+  }));
+}
 
-    if (!aceite) {
-      alert("Você precisa concordar com os termos.");
-      return;
-    }
+function handleSubmit(e) {
+  e.preventDefault();
 
-    console.log("Dados da anamnese:", form);
-    alert("Anamnese enviada com sucesso!");
-
-    setForm({});
-    setAceite(false);
-
-    e.target.reset();
-     navigate("/");
+  if (!aceite) {
+    alert("Você precisa concordar com os termos.");
+    return;
   }
+
+  const anamnesesSalvas = JSON.parse(
+    localStorage.getItem("anamneses")
+  ) || [];
+
+  const novaAnamnese = {
+    id: Date.now(),
+    dataEnvio: new Date().toISOString(),
+    ...form,
+  };
+
+  const novasAnamneses = [...anamnesesSalvas, novaAnamnese];
+
+  localStorage.setItem(
+    "anamneses",
+    JSON.stringify(novasAnamneses)
+  );
+
+  alert("Anamnese enviada com sucesso!");
+
+  setForm({});
+  setAceite(false);
+  e.target.reset();
+
+  navigate("/");
+}
+
 
   return (
     <div>
-      <UL />
+      
       <form className={styles.form} onSubmit={handleSubmit}>
         <h1 className={styles.title}>Nova Anamnese</h1>
 
@@ -132,41 +157,8 @@ export default function Anamnese() {
         />
 
         <h2 className={styles.section}>Endereço</h2>
+        <FormularioEndereco onEnderecoChange={handleEnderecoChange} />
 
-        <input
-          className={styles.input}
-          name="cep"
-          placeholder="CEP"
-          onChange={handleChange}
-          required
-        />
-        <input
-          className={styles.input}
-          name="endereco"
-          placeholder="Endereço"
-          onChange={handleChange}
-        />
-        <input
-          className={styles.input}
-          name="bairro"
-          placeholder="Bairro"
-          onChange={handleChange}
-          required
-        />
-        <input
-          className={styles.input}
-          name="cidade"
-          placeholder="Cidade"
-          onChange={handleChange}
-          required
-        />
-        <input
-          className={styles.input}
-          name="estado"
-          placeholder="Estado"
-          onChange={handleChange}
-          required
-        />
 
         <h2 className={styles.section}>Informações de Saúde</h2>
 

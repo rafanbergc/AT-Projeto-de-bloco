@@ -1,8 +1,9 @@
 import Anamnese from "../components/Anamnese/AnamneseCliente/Anamnese";
-
+import UL from "../components/UL/UL";
 export default function NovaAnamnese() {
   return (
-    <div>
+    <div className="container">
+      <UL />
       <Anamnese />
     </div>
   );

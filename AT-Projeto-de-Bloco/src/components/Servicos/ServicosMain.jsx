@@ -4,16 +4,16 @@ import NavbarAtendimentos from "./NavBarAtendimentos";
 import styles from "./ServicosMain.module.css";
 
 function ServicosMain() {
-  // Estado para o atendimento selecionado
+  
   const [servicoSelecionado, setServicoSelecionado] = useState(null);
 
-  // Estado para detectar mobile
+  
   const [isMobile, setIsMobile] = useState(window.innerWidth < 441);
 
-  // Estado para armazenar todos os atendimentos
+  
   const [atendimentos, setAtendimentos] = useState([]);
 
-  // Listener de resize para atualizar isMobile
+  
   useEffect(() => {
     function handleResize() {
       setIsMobile(window.innerWidth < 441);
@@ -23,7 +23,7 @@ function ServicosMain() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Fetch dos atendimentos
+  
   useEffect(() => {
     fetch("/json/procedimentos.json")
       .then((response) => response.json())

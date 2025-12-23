@@ -7,19 +7,34 @@ function Anamneses() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/json/anamnese.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setAnamneses(data);
-        setLoading(false);
-      })
-      .catch((error) => {
+    async function carregarDados() {
+      try {
+        const response = await fetch("/json/anamnese.json");
+        const dadosJson = await response.json();
+
+        const dadosLocal = JSON.parse(
+          localStorage.getItem("anamneses")
+        ) || [];
+
+        const listaFinal = [...dadosJson, ...dadosLocal];
+
+        setAnamneses(listaFinal);
+      } catch (error) {
         console.error("Erro ao carregar anamneses:", error);
-      });
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    carregarDados();
   }, []);
 
   if (loading) {
     return <p style={{ padding: 20 }}>Carregando anamneses...</p>;
+  }
+
+  if (anamneses.length === 0) {
+    return <p style={{ padding: 20 }}>Nenhuma anamnese cadastrada.</p>;
   }
 
   return (
@@ -36,10 +51,14 @@ function Anamneses() {
             </p>
 
             <p>
-              <strong>Cidade:</strong> {paciente.cidade} / {paciente.estado}
+              <strong>Cidade:</strong>{" "}
+              {paciente.endereco?.localidade} / {paciente.endereco?.uf}
             </p>
 
-            <NavLink to={`/pacientes/${paciente.id}`} className={styles.botao}>
+            <NavLink
+              to={`/pacientes/${paciente.id}`}
+              className={styles.botao}
+            >
               Ver Anamnese
             </NavLink>
           </li>
